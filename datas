@@ -1,0 +1,220 @@
+package br.ucsal.atividade;
+
+public class Crud implements ICrud{
+	String[]textos = new String[10];
+	int tamanho = 0;
+
+	@Override
+	public void create(String texto) {
+		for (int cont = 0; cont < textos.length; cont++) {
+			if(textos[cont]== null) {
+				textos[cont] = texto;
+				return;
+			}
+			else if(textos[cont] != null && cont == textos.length-1) {
+				
+				String [] textos2 = new String[textos.length*2];
+				
+				for (int cont2 = 0; cont2 < textos.length; cont2++) {
+					
+					if(cont2 < textos.length) {
+						textos2[cont2]= textos[cont2];
+					}
+					else {
+						textos2[cont2] = texto;
+					}
+				}
+				textos = textos2;
+			}
+		}
+		
+	}
+
+	@Override
+	public int read(String texto) {
+		int saida = -1;
+		for (int cont = 0; cont < textos.length; cont++) {
+			if(textos[cont].equals(texto)) {
+				saida = cont;
+			}
+		}
+		return saida;
+	}
+
+	@Override
+	public void update(String textoNovo, String textoAntigo) {
+		for (int cont = 0; cont < textos.length; cont++) {
+			if(textos[cont].equals(textoAntigo)) {
+				textos[cont] = textoNovo;
+			}
+		}
+	}
+
+	@Override
+	public void delete(String texto) {
+		for (int cont = 0; cont < textos.length; cont++) {
+			if(textos[cont].equals(texto)) {
+				textos[cont] = null;
+			}
+		}
+	}
+	
+	
+}
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+package br.ucsal;
+
+public class Crud implements ICrud {
+	String [] lista;
+	public Crud(int tamanho){
+		lista = new String [tamanho];
+	}
+
+	@Override
+	public void Create(String valor) {
+		for (int j = 0; j < lista.length; j++) {
+			if(lista[j]== null) {
+				lista[j] = valor;
+				return;
+			}
+			else if(lista[j] != null && j == lista.length-1) {
+				String [] novaLista = new String[lista.length*2];
+				for (int k = 0; k < lista.length; k++) {
+					if(k < lista.length)
+						novaLista[k]= lista[k];
+					else
+						novaLista[k] = valor;
+				}
+				lista = novaLista;
+			}
+		}
+
+	}
+	@Override
+	public int Read(String valor) {
+		int x = -1;
+	
+		for (int i = 0; i < lista.length; i++) {
+			if(lista[i].equals(valor)) {
+				x = i;
+				break;
+			}
+		}
+		return x;
+	}
+
+	@Override
+	public void Update(String atual, String novo) {
+		try {
+		for (int i = 0; i < lista.length; i++) {
+			if(lista[i].equals(atual)) {
+				lista[i] = novo;
+				break;
+			}
+		}
+		}
+	    catch(Exception e) {
+			
+			}
+	}
+
+	@Override
+	public void Remove(String valor) {
+		for (int i = 0; i < lista.length; i++) {
+			if(lista[i].equals(valor)) {
+				lista[i] = null;
+				break;
+			}
+		}
+		for(int i=0;i< lista.length; i++) {
+			for(int j=0;j<lista.length-1;j++) {
+				if(lista[j] == null) {
+					String temp=lista[j];
+					lista[j]=lista[j+1];
+					lista[j+1]= temp;
+				}
+			}
+		}
+	}
+
+}
+package br.ucsal;
+
+public class Crud implements ICrud {
+	String [] lista;
+	public Crud(int tamanho){
+		lista = new String [tamanho];
+	}
+
+	@Override
+	public void Create(String valor) {
+		for (int j = 0; j < lista.length; j++) {
+			if(lista[j]== null) {
+				lista[j] = valor;
+				return;
+			}
+			else if(lista[j] != null && j == lista.length-1) {
+				String [] novaLista = new String[lista.length*2];
+				for (int k = 0; k < lista.length; k++) {
+					if(k < lista.length)
+						novaLista[k]= lista[k];
+					else
+						novaLista[k] = valor;
+				}
+				lista = novaLista;
+			}
+		}
+
+	}
+	@Override
+	public int Read(String valor) {
+		int x = -1;
+	
+		for (int i = 0; i < lista.length; i++) {
+			if(lista[i].equals(valor)) {
+				x = i;
+				break;
+			}
+		}
+		return x;
+	}
+
+	@Override
+	public void Update(String atual, String novo) {
+		try {
+		for (int i = 0; i < lista.length; i++) {
+			if(lista[i].equals(atual)) {
+				lista[i] = novo;
+				break;
+			}
+		}
+		}
+	    catch(Exception e) {
+			
+			}
+	}
+
+	@Override
+	public void Remove(String valor) {
+		for (int i = 0; i < lista.length; i++) {
+			if(lista[i].equals(valor)) {
+				lista[i] = null;
+				break;
+			}
+		}
+		for(int i=0;i< lista.length; i++) {
+			for(int j=0;j<lista.length-1;j++) {
+				if(lista[j] == null) {
+					String temp=lista[j];
+					lista[j]=lista[j+1];
+					lista[j+1]= temp;
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <Title>Java WEB - Calendário</Title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="CalendarioWEB.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="scriptCalendario.js"></script>
+  </head>
+  <body>
+        <div class="content">
+      <div class="top">
+        <div class="topInside">
+        <div class="topLogo"><img src="../Imagens/default.png"></div>
+          <div class="topButtons">
+            <ul class="menu">
+              <li><i class="material-icons">create</i>&nbsp;&nbsp;<a href="ClassroomWEB.html">Anotações</a>&nbsp;&nbsp;</li>
+              <li><i class="material-icons">import_contacts</i>&nbsp;&nbsp;<a href="">Atividades</a>&nbsp;&nbsp;</li>
+              <li><i class="material-icons">date_range</i>&nbsp;&nbsp;<a href="CalendarioWEBClassroom.html">Calendário de avaliações</a>&nbsp;&nbsp;</li>
+              <li><i class="material-icons">filter_9_plus</i>&nbsp;&nbsp;<a href="">Notas</a>&nbsp;&nbsp;</li>
+            </ul>
+          </div>
+        </div>
+    </div>
+    <div id="generico">
+    <div class="hidden" id="1"><h1>23/09</h1></div>
+    <div class="hidden" id="2"><h1>30/09</h1></div>
+    <div class="hidden" id="3"><h1>07/10</h1></div>
+    <div class="hidden" id="4"><h1>14/10</h1></div>
+    <div class="hidden" id="5"><h1>21/10</h1></div>
+    <div class="hidden" id="6"><h1>28/10</h1></div>
+    <div class="hidden" id="7"><h1>04/11</h1></div>
+    <div class="hidden" id="8"><h1>11/11</h1></div>
+    <div class="hidden" id="9"><h1>18/11</h1></div>
+    <div class="hidden" id="10"><h1>25/11</h1></div>
+    <div class="hidden" id="11"><h1>02/12</h1></div>
+    <div class="hidden" id="12"><h1>09/12</h1></div>
+    </div>
+     <div class="Materias">
+          <div class="menuInterno">
+           <ul class="menuMaterias">
+             <h2 class="tituloMaterias">Dias de aula</h2>
+             <hr>
+             <li><a onclick="showContent(this)" value="1">23/09</a></li>
+             <hr>
+             <li><a onclick="showContent(this)" value="2">30/09</a></li>
+             <hr>
+             <li><a onclick="showContent(this)" value="3">07/10</a></li>
+             <hr>
+             <li><a onclick="showContent(this)" value="4">14/10</a></li>
+             <hr>
+             <li><a onclick="showContent(this)" value="5">21/10</a></li>
+             <hr>
+             <li><a onclick="showContent(this)" value="6">28/10</a></li>
+             <hr>
+             <li><a onclick="showContent(this)" value="7">04/11</a></li>
+             <hr>
+             <li><a onclick="showContent(this)" value="8">11/11</a></li>
+             <hr>
+             <li><a onclick="showContent(this)" value="9">18/11</a></li>
+             <hr>
+             <li><a onclick="showContent(this)" value="10">25/11</a></li>
+             <hr>
+             <li><a onclick="showContent(this)" value="11">02/12</a></li>
+             <hr>
+             <li><a onclick="showContent(this)" value="12">09/12</a></li>
+             <hr>
+           </ul>
+          </div>
+        </div>
+      </div>
+  </body>
+  </html>

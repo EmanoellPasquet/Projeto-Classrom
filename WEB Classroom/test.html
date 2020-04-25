@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+function trocaFrase(){
+var fraseAtual = document.getElementById("frase");
+fraseAtual.innerHTML = "Funcionou, a frase Mudou!";
+return false;
+}
+</script>
+</head>
+
+<body>
+  
+<table border="0">
+<tr>
+<td><div id="frase">Clique para Trocar a Frase</div></td>
+</tr>
+<tr>
+<td><input type="submit" value="Mudar" onclick="trocaFrase()"/></td>
+</tr>
+</table>
+
+</body>
+</html>
